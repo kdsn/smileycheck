@@ -9,6 +9,10 @@ Options -Indexes
 
 # Enable URL rewriting
 RewriteEngine On
+RewriteBase /
+
+# Set domain variabel
+RewriteRule (.*) $1 [E=HOSTNAME_ENV:smileycheck.dk]
 
 # Deny acces to certain directorys
 RewriteRule ^(src|data|cron)/ - [F,L]
@@ -18,12 +22,21 @@ RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Rewrite URL for API access (e.g. /api/v1/endpoint)
-RewriteRule ^api/v1/(.*)$ api/index.php?request=$1 [QSA,L]
+RewriteRule ^api/v1/(.*)$ /public/api/index.php?request=$1 [QSA,L]
+
+# Map site to /public
+RewriteRule ^$ /public/ [L]
 
 # Handle Front Controller pattern for clean URLs
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ index.php [QSA,L]
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteRule ^(.*)$ /public/  [QSA,L]
 
 # Redirect all not found pages to index.php
-ErrorDocument 404 /index.php
+ErrorDocument 404 public/index.php
+
+
+
+
+
