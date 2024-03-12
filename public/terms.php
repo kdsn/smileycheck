@@ -25,7 +25,7 @@ include "templates/header.php";
                 <br>
                 Du har ret til at bruge data i dette omfang fødevarestyrelsen tillader det.<br>
                 <br>
-                Der er en daglig begrænsning på antal opslag en organisation/person kan lave. Du må ikke omgå begrænsningen ved at skifte IP-adresse, obskure useragent-strengen.<br>
+                Der er en daglig begrænsning på antal opslag en organisation/person kan lave. Du må ikke omgå begrænsningen ved at skifte IP-adresse, eller obskure useragent-strengen.<br>
                 <br>
                 <strong>Kildeangivelse</strong><br>
                 Ved brug af data kan du skrive, at du får data fra SmileyCheck.<br>

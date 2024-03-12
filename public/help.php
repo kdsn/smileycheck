@@ -16,8 +16,10 @@ include "templates/header.php";
     <div class="container">
         <div class="row spacer-top">
             <div class="col">
-                <h2>Kontakt SmileyCheck</h2>
+                <h2>Hvorfor har i data om mig?</h2>
                 <hr>
+                SmileyCheck indsamler ikke data selv, men anvender data fra Fødevarestyrelsen. Hver sjette time opdaterer SmileyCheck sin database ved at hente en XML-fil fra https://www.findsmiley.dk. Disse data bliver derefter gjort tilgængelige gennem et API.
+
             </div>
         </div>
     </div>

@@ -1,5 +1,7 @@
 <?php
 $title = " - Kontakt";
+$uri = "kontakt";
+
 include "templates/header.php";
 ?>
 

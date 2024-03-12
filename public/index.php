@@ -28,6 +28,10 @@ switch ($request) {
         require __DIR__ . '/terms.php';
         break;
 
+    case '/test':
+        require __DIR__ . '/test.php';
+        break;
+
     case '/api':
         // Redirect to the API section - This will actually be handled by .htaccess and directed to /public/api/index.php
         header("Location: /public/api/index.php");
